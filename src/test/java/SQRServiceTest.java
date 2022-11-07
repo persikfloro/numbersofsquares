@@ -6,15 +6,16 @@ public class SQRServiceTest {
     @Test
     public void anotherRange() {
         SQRService service = new SQRService();
-        int expected = 29;
+        int expected = 20;
         int actual = service.calcSqrt(100, 888);
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void narrowRange() {
         SQRService service = new SQRService();
-        int expected = 21;
+        int expected = 6;
         int actual = service.calcSqrt(236, 453);
 
         Assertions.assertEquals(expected, actual);
@@ -23,7 +24,7 @@ public class SQRServiceTest {
     @Test
     public void wideRange() {
         SQRService service = new SQRService();
-        int expected = 99;
+        int expected = 90;
         int actual = service.calcSqrt(1, 9801);
 
         Assertions.assertEquals(expected, actual);
@@ -37,5 +38,14 @@ public class SQRServiceTest {
 
         Assertions.assertEquals(expected, actual);
 
+    }
+
+    @Test
+    public void originalRange() {
+        SQRService service = new SQRService();
+        int expected = 10;
+        int actual = service.calcSqrt(200, 600);
+
+        Assertions.assertEquals(expected, actual);
     }
 }
